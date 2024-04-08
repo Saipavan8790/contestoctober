@@ -22,7 +22,7 @@ addSheetBtn.addEventListener("click", (e) => {
     handleSheetRemoval(sheet);
     sheet.click();
 });
-// am shivani jaiswal wellcome to my project
+
 function handleSheetRemoval(sheet) {
     sheet.addEventListener("mousedown", (e) => {
         // Right Click
@@ -35,7 +35,6 @@ function handleSheetRemoval(sheet) {
         }
 
         let response = confirm("Your sheet will be removed permanently, Are you sure ?");
-        //shivani jaiswal
         if (response === false) return;
         let sheetIdx = Number(sheet.getAttribute("id"));
         // DB 
@@ -46,7 +45,6 @@ function handleSheetRemoval(sheet) {
         handleSheetUIRemoval(sheet);
 
         // By default DB to sheet 1 (active)
-        //shivani jaiswal
         sheetDB = collectedSheetDB[0];
         graphComponentMatrix = collectedGraphComponent[0];
         handleSheetProperties();
@@ -57,9 +55,7 @@ function handleSheetRemoval(sheet) {
 function handleSheetUIRemoval(sheet) {
     sheet.remove();
     let allSheetFolders = document.querySelectorAll(".sheet-folder");
-    for (let i = 0; i < allSheetFolders.length; i++)
-    //shivani jaiswal
-     {
+    for (let i = 0; i < allSheetFolders.length; i++) {
         allSheetFolders[i].setAttribute("id", i);
         let sheetContent = allSheetFolders[i].querySelector(".sheet-content");
         sheetContent.innerText = `Sheet ${i + 1}`;
