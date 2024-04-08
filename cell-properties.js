@@ -45,7 +45,7 @@ let activeColorProp = "#d1d8e0";
 let inactiveColorProp = "#ecf0f1";
 
 // Attach property listeners
-// Add event listeners to cell property buttons (bold, italic, underline, etc.)
+
 bold.addEventListener('click', (e) => {
     let address = addressBar.value;
     let [cell, cellProp] = getCellAndCellProp(address);
@@ -153,7 +153,6 @@ for (let i = 0; i < allCells.length; i++) {
     addListenterToAttachCellProperties(allCells[i]);
 }
 
-// Add event listeners to each cell to display their properties
 function addListenterToAttachCellProperties(cell) {
     cell.addEventListener("click", (e) => {
 
